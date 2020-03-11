@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Counted Words</title>
+  </head>
+  <body>
+    <h1>Your text had {{count}} words in it.</h1>
+    <p>The text you entered was -:</p>
+    <br>
+    <p>{{words}}</p>
+    {% for word, total_count in word_list %}
+    <p>Word : {{word}} and Count : {{total_count}}</p>
+    {% endfor %}
+    <a href="{% url 'home' %}">Count Again ?</a>
+  </body>
+</html>
